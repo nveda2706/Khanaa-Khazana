@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khanaa Khazana - Smart Campus Canteen Ordering Platform</title>
+    <!-- Tailwind CSS for robust modern responsive layouts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for professional visual anchors -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAFAF9;
+            color: #1C1917;
+        }
+
+        .phone-shell {
+            background: linear-gradient(180deg, #f8f7f5 0%, #f3efe9 100%);
+            border: 1px solid rgba(28,25,23,0.08);
+            box-shadow: 0 18px 40px rgba(28,25,23,0.12);
+        }
+
+        .screen-card {
+            border: 1px solid rgba(28,25,23,0.09);
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(3px);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #F5F5F4;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D6D3D1;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #A8A29E;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- NAVIGATION MENU BAR -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <div class="bg-orange-500 text-white p-2.5 rounded-xl shadow-md shadow-orange-500/20">
+                        <i class="fa-solid fa-utensils text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r应用 bg-clip-text text-transparent from-stone-900 to-stone-700">Khanaa Khazana</span>
+                        <span class="block text-[10px] uppercase font-bold tracking-widest text-orange-600">Campus Hub</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-semibold text-stone-600 hover:text-orange-500 transition-colors">Home</a>
+                    <a href="#app-flow" class="text-sm font-semibold text-stone-600 hover:text-orange-500 transition-colors">App Flow</a>
+                    <a href="#features" class="text-sm font-semibold text-stone-600 hover:text-orange-500 transition-colors">App Walkthrough</a>
+                    <a href="#menu" class="text-sm font-semibold text-stone-600 hover:text-orange-500 transition-colors">Menu Pricing</a>
+                    <a href="#compliance" class="text-sm font-semibold text-stone-600 hover:text-orange-500 transition-colors">Legal Terms</a>
+                    <a href="#contact" class="text-sm font-semibold text-stone-600 hover:text-orange-500 transition-colors">Contact</a>
+                </div>
+                <div>
+                    <a href="#home" class="bg-stone-900 hover:bg-stone-800 text-white text-xs font-bold px-5 py-3 rounded-xl transition-all shadow-sm">Get App</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO DISPLAY PLATFORM SECTION -->
+    <section id="home" class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-orange-50/50 to-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Hero Core Copywriting Layout -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-6">
+                        <i class="fa-solid fa-graduation-cap"></i> Designed Exclusively for Campus Canteens
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-900 leading-tight mb-6">
+                        Skip Canteen Lines with <span class="text-orange-500">Khanaa Khazana</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+                        Pre-order meals instantly from your mobile interface. Browse real-time kitchen inventory counters, coordinate automated receipt tokens, and process encrypted checkout fees seamlessly utilizing our verified integrations.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a id="downloadButton" href="https://apps.nvivekd.in/api/public/dl/5C4Hk3jO?inline=true" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all group" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-android text-2xl group-hover:scale-110 transition-transform"></i>
+                            <div class="text-left">
+                                <span class="block text-[10px] uppercase tracking-wider font-medium text-orange-100 opacity-90">Download Android App</span>
+                                <span class="text-sm">Download Secure APK</span>
+                            </div>
+                        </a>
+                        <span class="text-xs text-stone-500 italic max-w-[220px] text-center sm:text-left">
+                            *Downloads the apk file of the app.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Hero Native Mockup Graphic Framework Element -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-[580px] bg-stone-900 rounded-[42px] p-3 shadow-2xl shadow-stone-950/20 ring-1 ring-stone-900/10">
+                        <!-- Internal Screen Layout Mocking Welcome Back Module -->
+                        <div class="w-full h-full bg-[#FAF8F5] rounded-[34px] overflow-hidden border border-stone-800 flex flex-col items-center justify-center px-6 text-center relative">
+                            <div class="bg-orange-500 text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/30 mb-6">
+                                <i class="fa-solid fa-utensils text-2xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-stone-900 mb-1 tracking-tight">Welcome back</h2>
+                            <p class="text-xs text-stone-500 mb-8">Sign in to your canteen account</p>
+                            
+                            <div class="w-full space-y-3 mb-6">
+                                <div class="bg-white border border-stone-200 rounded-xl p-3 text-left text-xs text-stone-400 flex items-center gap-2.5">
+                                    <i class="fa-regular fa-envelope"></i> Email address
+                                </div>
+                                <div class="bg-white border border-stone-200 rounded-xl p-3 text-left text-xs text-stone-400 flex justify-between items-center">
+                                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-lock"></i> Password</span>
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="w-full bg-orange-500 text-white text-xs font-bold py-3.5 rounded-xl shadow-md shadow-orange-500/20 mb-4">
+                                Sign In
+                            </div>
+                            
+                            <span class="text-[10px] text-stone-400 max-w-[180px]">By continuing you agree to our Terms, Privacy Policy & Refund Policy</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- APP FLOW SECTION WITH FLUTTER SCREEN PREVIEWS -->
+    <section id="app-flow" class="py-20 bg-white border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">Flutter App Payment Flow</h2>
+                <p class="mt-4 text-stone-600">
+                    All payments are accepted only through the Android app developed with Flutter. The website is informational and the actual payment experience happens inside the app using Razorpay test mode for checkout validation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="phone-shell rounded-[32px] p-3 w-full max-w-lg mx-auto">
+                    <div class="bg-[#f8f5f1] rounded-[28px] overflow-hidden border border-stone-200">
+                        <div class="bg-[#f0ece8] px-5 py-4 flex items-center justify-between border-b border-stone-200">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-orange-500 text-white flex items-center justify-center font-bold text-lg">C</div>
+                                <div class="text-2xl font-extrabold text-stone-900">College Canteen</div>
+                            </div>
+                            <div class="w-9 h-9 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700">
+                                <i class="fa-solid fa-user text-xs"></i>
+                            </div>
+                        </div>
+                        <div class="p-5 space-y-5">
+                            <div class="text-4xl font-extrabold text-stone-900 leading-tight">Hello, Nachiket</div>
+                            <div class="text-xl text-stone-500">What would you like today?</div>
+                            <div class="screen-card rounded-[22px] p-4 flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-16 h-16 rounded-2xl bg-[#f6d7c6] flex items-center justify-center text-3xl">🍔</div>
+                                    <div>
+                                        <div class="text-3xl font-extrabold text-stone-900">Cold Coffee</div>
+                                        <div class="text-xl font-bold text-orange-600">₹50 <span class="text-stone-500 font-medium">47 available</span></div>
+                                    </div>
+                                </div>
+                                <div class="w-14 h-14 rounded-full bg-orange-500 text-white flex items-center justify-center text-4xl font-light">+</div>
+                            </div>
+                            <div class="screen-card rounded-[22px] p-4 flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-16 h-16 rounded-2xl bg-[#f6d7c6] flex items-center justify-center text-3xl">🍔</div>
+                                    <div>
+                                        <div class="text-3xl font-extrabold text-stone-900">Cold Coffee with Crush</div>
+                                        <div class="text-xl font-bold text-orange-600">₹60 <span class="text-stone-500 font-medium">48 available</span></div>
+                                    </div>
+                                </div>
+                                <div class="w-14 h-14 rounded-full bg-orange-500 text-white flex items-center justify-center text-4xl font-light">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-shell rounded-[32px] p-3 w-full max-w-lg mx-auto">
+                    <div class="bg-[#f8f5f1] rounded-[28px] overflow-hidden border border-stone-200">
+                        <div class="bg-[#f0ece8] px-5 py-4 flex items-center justify-between border-b border-stone-200">
+                            <div class="w-9 h-9 rounded-xl flex items-center justify-center text-2xl text-stone-700">←</div>
+                            <div class="text-2xl font-extrabold text-stone-900">Payment Options</div>
+                            <div class="w-9 h-9 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700">
+                                <i class="fa-solid fa-user text-xs"></i>
+                            </div>
+                        </div>
+                        <div class="p-5 space-y-5">
+                            <div class="text-[28px] font-extrabold text-stone-900">Recommended</div>
+                            <div class="screen-card rounded-[20px] p-4 flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 rounded-2xl bg-[#f3dfe7] flex items-center justify-center text-2xl">🏦</div>
+                                    <div class="text-3xl font-extrabold text-stone-900">Karnataka Bank Netbanking</div>
+                                </div>
+                                <div class="text-3xl text-stone-500">›</div>
+                            </div>
+                            <div class="mt-5 text-[28px] font-extrabold text-stone-900">All Payment Options</div>
+                            <div class="space-y-4">
+                                <div class="screen-card rounded-[18px] p-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-10 h-10 rounded-xl bg-white border border-stone-200 flex items-center justify-center text-2xl">💳</div>
+                                        <div class="text-2xl font-bold text-stone-900">Cards</div>
+                                    </div>
+                                    <div class="text-2xl text-stone-500">›</div>
+                                </div>
+                                <div class="screen-card rounded-[18px] p-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-10 h-10 rounded-xl bg-white border border-stone-200 flex items-center justify-center text-2xl">🏛️</div>
+                                        <div class="text-2xl font-bold text-stone-900">Netbanking</div>
+                                    </div>
+                                    <div class="text-2xl text-stone-500">⌄</div>
+                                </div>
+                                <div class="screen-card rounded-[18px] p-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-10 h-10 rounded-xl bg-white border border-stone-200 flex items-center justify-center text-2xl">👛</div>
+                                        <div class="text-2xl font-bold text-stone-900">Wallet</div>
+                                    </div>
+                                    <div class="text-2xl text-stone-500">⌄</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPLANATIVE APPLICATION GRAPHIC GRID WALKTHROUGH SECTION -->
+    <section id="features" class="py-20 bg-white border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">Application Walkthrough & Features</h2>
+                <p class="mt-4 text-stone-600">Explore the interface mechanics mapped directly from verified native operational code matrices.</p>
+            </div>
+
+            <!-- Dynamic UI Feature Explanation Interface Layout Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Interface Card 1: Account Registration Profile -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200/60 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-2.5 py-1 bg-stone-200/60 text-stone-700 text-xs font-bold rounded-lg uppercase tracking-wider">Screen 01</span>
+                            <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600"><i class="fa-solid fa-user-plus text-sm"></i></div>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900 mb-3">Create Customer Account</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                            Enables secure demographic profile provisioning. Customers map verification metrics including Full Name, email authentication strings, and passwords bound to data management layers.
+                        </p>
+                    </div>
+                    <!-- Wireframe Simulator Element to replace screenshot placeholder cleanly -->
+                    <div class="bg-white border border-stone-200/80 rounded-2xl p-4 text-xs space-y-2.5">
+                        <div class="font-bold text-stone-700 mb-1">Create Account Fields</div>
+                        <div class="h-7 bg-stone-50 border border-stone-200 rounded-lg flex items-center px-2 text-stone-400 gap-2"><i class="fa-regular fa-user"></i> Full name</div>
+                        <div class="h-7 bg-stone-50 border border-stone-200 rounded-lg flex items-center px-2 text-stone-400 gap-2"><i class="fa-regular fa-envelope"></i> Email address</div>
+                    </div>
+                </div>
+
+                <!-- Interface Card 2: Interactive Session Cart -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200/60 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-2.5 py-1 bg-stone-200/60 text-stone-700 text-xs font-bold rounded-lg uppercase tracking-wider">Screen 02</span>
+                            <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600"><i class="fa-solid fa-basket-shopping text-sm"></i></div>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900 mb-3">Your Basket Selection</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                            Displays subtotal aggregates dynamically parsed before checkout initialization hooks. Provides full control over increment variables and live policy review.
+                        </p>
+                    </div>
+                    <div class="bg-white border border-stone-200/80 rounded-2xl p-4 text-xs space-y-2">
+                        <div class="flex justify-between text-stone-700 font-bold border-b pb-1.5 mb-1"><span>Item Name</span><span>Qty</span></div>
+                        <div class="flex justify-between text-stone-500"><span>Cold Coffee with Crush</span><span>1 × ₹60</span></div>
+                        <div class="flex justify-between text-stone-500"><span>Corn Onion Capsicum Pizza</span><span>1 × ₹109</span></div>
+                        <div class="flex justify-between text-orange-600 font-extrabold pt-1 border-t mt-1"><span>Total</span><span>₹169</span></div>
+                    </div>
+                </div>
+
+                <!-- Interface Card 3: Secure Payment Gateways Router -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200/60 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-2.5 py-1 bg-stone-200/60 text-stone-700 text-xs font-bold rounded-lg uppercase tracking-wider">Screen 03</span>
+                            <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600"><i class="fa-solid fa-shield-halved text-sm"></i></div>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900 mb-3">Razorpay Checkout Hub</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                            Native compliance router channeling authorization keys to execute test/live verification sequences securely across cards, net-banking channels, and UPI workflows.
+                        </p>
+                    </div>
+                    <div class="bg-white border border-stone-200/80 rounded-2xl p-4 text-xs space-y-2">
+                        <div class="font-bold text-stone-700 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-lock text-emerald-600"></i> Recommended payment</div>
+                        <div class="h-8 bg-stone-50 border border-stone-200 rounded-lg flex items-center justify-between px-2 text-stone-600 font-medium">
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-building-columns text-stone-400"></i> Karnataka Bank</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] text-stone-400"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interface Card 4: Inventory Vouchers Log -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200/60 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-2.5 py-1 bg-stone-200/60 text-stone-700 text-xs font-bold rounded-lg uppercase tracking-wider">Screen 04</span>
+                            <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600"><i class="fa-solid fa-clock-rotate-left text-sm"></i></div>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900 mb-3">Live Order Tracking</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                            Keeps an exhaustive timeline history indexing active preparation parameters alongside alphanumeric transaction vouchers (e.g. Order #TFETKBY).
+                        </p>
+                    </div>
+                    <div class="bg-white border border-stone-200/80 rounded-2xl p-4 text-xs space-y-2">
+                        <div class="flex justify-between items-center bg-stone-50 border border-stone-200 rounded-lg p-2">
+                            <div>
+                                <span class="block font-bold text-stone-700">Order #N58DBN4</span>
+                                <span class="text-[10px] text-stone-400">1x Cold Coffee</span>
+                            </div>
+                            <span class="bg-blue-50 text-blue-700 font-bold px-1.5 py-0.5 rounded text-[10px]">Order placed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interface Card 5: Operational Framework Profiles -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200/60 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-2.5 py-1 bg-stone-200/60 text-stone-700 text-xs font-bold rounded-lg uppercase tracking-wider">Screen 05</span>
+                            <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600"><i class="fa-solid fa-circle-nodes text-sm"></i></div>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900 mb-3">System Routing Console</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                            Internal network loop displaying active status updates, terminal interaction loads, and instant customer configuration paths cleanly.
+                        </p>
+                    </div>
+                    <div class="bg-white border border-stone-200/80 rounded-2xl p-4 flex items-center justify-center h-16 text-stone-300">
+                        <i class="fa-solid fa-mug-hot text-3xl animate-pulse text-orange-400"></i>
+                    </div>
+                </div>
+
+                <!-- Interface Card 6: Corporate Profile Node -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200/60 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-2.5 py-1 bg-stone-200/60 text-stone-700 text-xs font-bold rounded-lg uppercase tracking-wider">Screen 06</span>
+                            <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600"><i class="fa-solid fa-address-book text-sm"></i></div>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900 mb-3">Merchant Node Verification</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                            Transparent interface display layer documenting legal physical coordinates, operator name validation patterns, and helpline channels natively.
+                        </p>
+                    </div>
+                    <div class="bg-white border border-stone-200/80 rounded-2xl p-3 text-[11px] text-stone-600 space-y-1">
+                        <div class="font-bold text-stone-800 text-xs">Khanaa Khazana</div>
+                        <div><i class="fa-solid fa-envelope text-stone-400"></i> AatulK123@yahoo.com</div>
+                        <div><i class="fa-solid fa-phone text-stone-400"></i> 8483814141</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RAZORPAY TEST MODE PAYMENT GATEWAY SECTION -->
+    <section class="py-20 bg-stone-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">Razorpay Test Key Payment Gateway</h2>
+                <p class="mt-4 text-stone-600">
+                    This is a secure test-mode payment setup displayed for review/approval. The actual transaction is initiated inside the Flutter Android app. The payment gateway is configured with Razorpay test environment keys and is not a public web checkout.
+                </p>
+            </div>
+
+            <div class="bg-white border border-stone-200 rounded-[30px] p-6 sm:p-8 shadow-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
+                    <div class="space-y-5">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-[0.14em]">
+                            <i class="fa-solid fa-shield-halved"></i> Test Mode Enabled
+                        </div>
+                        <h3 class="text-3xl font-extrabold text-stone-900">Secure Razorpay checkout flow</h3>
+                        <ul class="space-y-3 text-stone-600 text-base leading-relaxed">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-orange-500 mt-1"></i><span>Powered by Razorpay for cards, netbanking, wallets, and UPI in the Flutter app only.</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-orange-500 mt-1"></i><span>Shown here for approval clarity so the payment screen is not mistaken for a web-only checkout or KBL bank page alone.</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-orange-500 mt-1"></i><span>Payments are accepted only through the Android app developed with Flutter, not via a public APK download link.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="rounded-[28px] border border-stone-200 bg-[#f8f5f1] p-5 shadow-inner">
+                        <div class="flex items-center justify-between pb-4 border-b border-stone-200 mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-xl font-bold">R</div>
+                                <div>
+                                    <div class="text-lg font-bold text-stone-900">Razorpay</div>
+                                    <div class="text-xs text-stone-500">Test gateway</div>
+                                </div>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-2 py-1 rounded-full">Secure</span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div class="rounded-2xl border border-stone-200 bg-white p-3">
+                                <div class="text-[11px] uppercase tracking-[0.18em] text-stone-500 mb-2">Payment method</div>
+                                <div class="flex items-center justify-between font-bold text-stone-900">
+                                    <span>Recommended</span>
+                                    <span>Netbanking</span>
+                                </div>
+                            </div>
+
+                            <div class="rounded-2xl border border-stone-200 bg-white p-3">
+                                <div class="text-[11px] uppercase tracking-[0.18em] text-stone-500 mb-2">Options</div>
+                                <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                                    <span class="bg-orange-50 text-orange-700 px-2.5 py-1 rounded-full">Cards</span>
+                                    <span class="bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full">UPI</span>
+                                    <span class="bg-sky-50 text-sky-700 px-2.5 py-1 rounded-full">Wallets</span>
+                                    <span class="bg-violet-50 text-violet-700 px-2.5 py-1 rounded-full">Netbanking</span>
+                                </div>
+                            </div>
+
+                            <div class="rounded-2xl border border-stone-200 bg-white p-3">
+                                <div class="text-[11px] uppercase tracking-[0.18em] text-stone-500 mb-2">Mode</div>
+                                <div class="text-base font-bold text-stone-900">Razorpay Test Key / Sandbox</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMERCIAL PRICE INDEX INDEX AND MENU CATALOG SECTION -->
+    <section id="menu" class="py-20 bg-stone-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-stone-900">Commercial Catalog Pricing Models</h2>
+                <p class="mt-4 text-stone-600">Tariff schedules published actively for consumer interface verification tracking.</p>
+            </div>
+
+            <div class="bg-white border border-stone-200 rounded-3xl shadow-sm overflow-hidden">
+                <div class="px-6 py-5 bg-stone-900 text-white flex justify-between items-center">
+                    <span class="font-bold tracking-wide text-sm">Product Description Mapping</span>
+                    <span class="text-xs uppercase tracking-wider font-semibold text-orange-400">Standard Rate (INR)</span>
+                </div>
+                <div class="divide-y divide-stone-100 px-6">
+                    <div class="flex justify-between items-center py-4.5">
+                        <span class="font-semibold text-stone-800 text-sm">Cold Coffee</span>
+                        <span class="font-extrabold text-orange-600 text-sm">₹50.00</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4.5">
+                        <span class="font-semibold text-stone-800 text-sm">Cold Coffee with Crush</span>
+                        <span class="font-extrabold text-orange-600 text-sm">₹60.00</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4.5">
+                        <span class="font-semibold text-stone-800 text-sm">Corn Onion Capsicum Pizza</span>
+                        <span class="font-extrabold text-orange-600 text-sm">₹109.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPLIANCE AUDIT POLICY TABS CONTAINER SECTION -->
+    <section id="compliance" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-stone-900">Merchant Onboarding & Compliance Documentation</h2>
+                <p class="mt-4 text-stone-600">Please read our legal operations frameworks, billing timelines, and privacy policies closely.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Document Module: Refund & Cancellation -->
+                <div class="border border-stone-200 rounded-3xl p-6 bg-stone-50/50 shadow-sm flex flex-col justify-between">
+                    <div class="custom-scrollbar overflow-y-auto max-h-[350px] pr-2">
+                        <div class="flex justify-between items-start mb-4 border-b border-stone-200 pb-3">
+                            <h3 class="text-lg font-bold text-stone-900 flex items-center gap-2"><i class="fa-solid fa-money-bill-transfer text-orange-500"></i> Refund & Cancellation Policy</h3>
+                            <span class="text-[10px] bg-stone-200 text-stone-600 px-2 py-0.5 font-bold rounded">21/09/2026</span>
+                        </div>
+                        <div class="space-y-4 text-sm text-stone-600 leading-relaxed">
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Cancellation Protocol</h4>
+                                <p>You may cancel an order before the canteen starts preparing it. Once preparation has started, the order cannot be cancelled. Contact us immediately if you need help.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Refund Authorization Conditions</h4>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>The order is cancelled by you before preparation starts.</li>
+                                    <li>The order is cancelled by the canteen (e.g. item unavailable).</li>
+                                    <li>You were charged but the order was not created (failed or duplicate payment).</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Exceptions & Non-Refundable Items</h4>
+                                <p>Food that has been prepared and is ready for pickup, or orders not collected by the customer, are not eligible for a refund. If there is a genuine quality issue, contact us and we will review it case by case.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Refund Method & Timeline</h4>
+                                <p>Approved refunds are returned to the original payment method via Razorpay within <strong>5–7 working days</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Module: Shipping & Pickup -->
+                <div class="border border-stone-200 rounded-3xl p-6 bg-stone-50/50 shadow-sm flex flex-col justify-between">
+                    <div class="custom-scrollbar overflow-y-auto max-h-[350px] pr-2">
+                        <div class="flex justify-between items-start mb-4 border-b border-stone-200 pb-3">
+                            <h3 class="text-lg font-bold text-stone-900 flex items-center gap-2"><i class="fa-solid fa-truck-ramp-box text-orange-500"></i> Shipping & Pickup Policy</h3>
+                            <span class="text-[10px] bg-stone-200 text-stone-600 px-2 py-0.5 font-bold rounded">21/09/2026</span>
+                        </div>
+                        <div class="space-y-4 text-sm text-stone-600 leading-relaxed">
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Digital Delivery & On-Premises Pickup</h4>
+                                <p>We do not ship any physical goods. All orders are prepared fresh and collected in person at the physical hub: <strong>666, Upper Indiranagar, Bibwewadi, Pune, Maharashtra- 411037</strong>.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Preparation & Operational Timeframe</h4>
+                                <p>Preparation time depends on the items ordered and current demand. You will receive an instantaneous push notification when your order status changes. Digital order processing occurs between <strong>0 to 24 Hours</strong> from order receipt validation.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Collection Requirements</h4>
+                                <p>Please present your unique transaction token interface or alphanumeric voucher inside the mobile application layer when collecting it from the counter lines.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Module: Privacy Policy -->
+                <div class="border border-stone-200 rounded-3xl p-6 bg-stone-50/50 shadow-sm flex flex-col justify-between lg:col-span-1">
+                    <div class="custom-scrollbar overflow-y-auto max-h-[350px] pr-2">
+                        <div class="flex justify-between items-start mb-4 border-b border-stone-200 pb-3">
+                            <h3 class="text-lg font-bold text-stone-900 flex items-center gap-2"><i class="fa-solid fa-user-shield text-orange-500"></i> Privacy Policy</h3>
+                            <span class="text-[10px] bg-stone-200 text-stone-600 px-2 py-0.5 font-bold rounded">21/09/2026</span>
+                        </div>
+                        <div class="space-y-4 text-sm text-stone-600 leading-relaxed">
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Information We Collect</h4>
+                                <p>Your name, email address and phone number (if provided), your order history, and device notification tokens used to send order status updates.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">How We Use It</h4>
+                                <p>To create and manage your account, process and fulfil orders, send order status notifications, and provide support.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Payment Processing Telemetry</h4>
+                                <p>Payments are handled by Razorpay. Your card, UPI or net-banking details are entered on Razorpay's secure checkout and are never stored by us. Razorpay's own privacy policy applies to that data.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Data Storage & Sharing</h4>
+                                <p>Your data is stored securely with Google Firebase. We do not sell your personal information. We share it only with service providers needed to run the app (Firebase, Razorpay) or when required by law.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Module: Terms & Conditions -->
+                <div class="border border-stone-200 rounded-3xl p-6 bg-stone-50/50 shadow-sm flex flex-col justify-between lg:col-span-1">
+                    <div class="custom-scrollbar overflow-y-auto max-h-[350px] pr-2">
+                        <div class="flex justify-between items-start mb-4 border-b border-stone-200 pb-3">
+                            <h3 class="text-lg font-bold text-stone-900 flex items-center gap-2"><i class="fa-solid fa-gavel text-orange-500"></i> Terms & Conditions</h3>
+                            <span class="text-[10px] bg-stone-200 text-stone-600 px-2 py-0.5 font-bold rounded">21/09/2026</span>
+                        </div>
+                        <div class="space-y-4 text-sm text-stone-600 leading-relaxed">
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Agreement of Operations</h4>
+                                <p>By creating a customer account inside Khanaa Khazana application instances, you formally signify full operational agreement to abide by local on-premises codes of student trade and secure clearing guidelines.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Gateway Architecture Declarations</h4>
+                                <p>All dynamic token settlement interfaces are anchored securely. Network failures triggered inside independent telecommunication networks during verification routes remain subject to local compliance check counters.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-800 mb-1">Account Safety Responsibilities</h4>
+                                <p>Users are strictly required to preserve verification tokens safely. Sharing customer profile parameters with third-party networks causing loss of inventory claims remains the single responsibility of the account holder.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CORPORATE ADRESS MODULE FOOTER BLOCK -->
+    <footer id="contact" class="bg-stone-900 text-stone-400 py-16 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-12 border-b border-stone-800">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3 text-white">
+                        <div class="bg-orange-500 text-white p-2 rounded-xl">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <span class="text-lg font-bold tracking-tight">Khanaa Khazana</span>
+                    </div>
+                    <p class="text-xs text-stone-500 leading-relaxed max-w-sm">
+                        Optimizing campus dining environments through integrated high-speed digital token provisioning engines. Securely linked, verified, and structured for local account audits.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <h4 class="text-xs uppercase font-extrabold tracking-widest text-stone-200">Registered Business Coordinates</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs leading-relaxed">
+                        <div class="space-y-2">
+                            <div class="text-stone-300 font-bold flex items-center gap-2"><i class="fa-solid fa-shop text-orange-500"></i> Corporate Name</div>
+                            <p class="pl-5 text-stone-400">Khanaa Khazana</p>
+                            <div class="text-stone-300 font-bold flex items-center gap-2 pt-2"><i class="fa-solid fa-map-location-dot text-orange-500"></i> Operational Physical Address</div>
+                            <p class="pl-5 text-stone-400">666, Upper Indiranagar, Bibwewadi, Pune, Maharashtra- 411037</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="text-stone-300 font-bold flex items-center gap-2"><i class="fa-solid fa-envelope text-orange-500"></i> Corporate Support Channel</div>
+                            <p class="pl-5 text-stone-400"><a href="mailto:AatulK123@yahoo.com" class="hover:text-white transition-colors">AatulK123@yahoo.com</a></p>
+                            <div class="text-stone-300 font-bold flex items-center gap-2 pt-2"><i class="fa-solid fa-phone text-orange-500"></i> Active Helpline Hotline</div>
+                            <p class="pl-5 text-stone-400"><a href="tel:8483814141" class="hover:text-white transition-colors">8483814141</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-stone-600">
+                <p>&copy; 2026 Khanaa Khazana. Powered via integrated micro-processing networks. All Rights Reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#compliance" class="hover:text-stone-400 transition-colors">Terms</a>
+                    <a href="#compliance" class="hover:text-stone-400 transition-colors">Privacy</a>
+                    <a href="#compliance" class="hover:text-stone-400 transition-colors">Refunds</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTION CONTROLLER JAVASCRIPT OBJECTS LAYER -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const downloadBtn = document.getElementById('downloadButton');
+            
+            // Console logger tracking onboarding state parameters during active audit reviews
+            console.log("Khanaa Khazana Compliance Environment Initialized Successfully.");
+            console.log("Active Gateway Context: Razorpay Test Mode Handshake Handlers Operational.");
+
+            downloadBtn.addEventListener('click', (e) => {
+                const currentHref = downloadBtn.getAttribute('href');
+                if (currentHref === "https://example.com/temp-apk-download") {
+                    console.log("Temporary APK download placeholder is active. Replace with final public link later.");
+                    return;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
